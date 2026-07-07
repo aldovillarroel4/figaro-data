@@ -40,7 +40,7 @@ const CurrencyInput: React.FC<{
       type="text"
       value={displayVal}
       onChange={handleInputChange}
-      className={`w-full px-2.5 py-1 text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800 ${className}`}
+      className={`w-full px-2.5 py-1 h-[30px] text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800 ${className}`}
       placeholder="0"
     />
   );
@@ -125,6 +125,7 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
   // Helper references for widths measurement
   const thInc0Ref = useRef<HTMLTableCellElement>(null);
   const thInc1Ref = useRef<HTMLTableCellElement>(null);
+  const thInc2Ref = useRef<HTMLTableCellElement>(null);
   const thExp0Ref = useRef<HTMLTableCellElement>(null);
   const thExp1Ref = useRef<HTMLTableCellElement>(null);
   const thExp2Ref = useRef<HTMLTableCellElement>(null);
@@ -187,7 +188,7 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
                           type="text"
                           value={item.description}
                           onChange={(e) => onIncomeChange(index, 'description', e.target.value)}
-                          className="w-full px-2.5 py-1 text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800"
+                          className="w-full px-2.5 py-1 h-[30px] text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800"
                           placeholder="Descripción"
                         />
                       </td>
@@ -299,7 +300,7 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
                           type="text"
                           value={item.description}
                           onChange={(e) => onExpenseChange(index, 'description', e.target.value)}
-                          className="w-full px-2.5 py-1 text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800"
+                          className="w-full px-2.5 py-1 h-[30px] text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all bg-white text-slate-800"
                           placeholder="Descripción"
                         />
                       </td>
@@ -325,14 +326,14 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
                               type="number"
                               value={item.percentage}
                               onChange={(e) => onExpenseChange(index, 'percentage', Number(e.target.value))}
-                              className="w-12 px-2 py-1 text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all text-center bg-white [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-slate-800"
+                              className="w-12 px-2.5 py-1 h-[30px] text-xs border border-slate-200 rounded-md focus:border-sky-500 focus:ring-2 focus:ring-sky-500/15 focus:outline-none transition-all text-center bg-white [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none text-slate-800"
                               placeholder="0"
                               min={0}
                               max={100}
                             />
                             <span className="text-xs text-slate-500 font-semibold">%</span>
                           </div>
-                          <span className="text-xxs font-mono font-medium text-slate-600 bg-white/70 px-2 py-1 rounded border border-slate-200 text-right min-w-[70px]">
+                          <span className="px-2.5 py-1 h-[30px] text-xs border border-slate-200 rounded-md bg-slate-50 text-slate-800 text-right min-w-[90px] flex items-center justify-end font-sans">
                             {formatCLP(calculateSecondFloor(item.amount || 0, item.percentage || 0))}
                           </span>
                         </div>
