@@ -1,0 +1,6 @@
+{
+  "name": "Figaro Año",
+  "description": "Aplicación de gestión financiera anual e histórica con análisis de ingresos, egresos e indicadores de utilidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
