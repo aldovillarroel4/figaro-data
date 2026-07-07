@@ -126,7 +126,7 @@ export const HistoricalSummaryTable: React.FC<HistoricalSummaryTableProps> = ({
           <span className="text-[10px] font-medium text-slate-400 mr-2 hidden md:inline">
             Doble clic para renombrar • Pase el cursor para eliminar
           </span>
-          <div className="inline-flex bg-slate-200/70 p-0.5 rounded-lg border border-slate-300/50 shadow-inner">
+          <div className="inline-flex bg-slate-200/70 p-0.5 rounded-lg border border-slate-300/50 shadow-inner gap-1.5">
             <button
               onClick={openDatosMensual}
               className="px-3 py-1 text-[11px] font-bold text-slate-700 hover:text-slate-900 bg-white rounded-md shadow-xs border border-slate-200/50 cursor-pointer transition-all"
