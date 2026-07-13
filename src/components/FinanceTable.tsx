@@ -214,7 +214,7 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
               <tfoot>
                 <tr className="bg-slate-100/80 font-bold text-slate-800 border-t border-slate-200">
                   <td style={getColStyle('incomeTable', 0)} className="p-2.5 border-r border-slate-200/40 text-xs">TOTAL INGRESOS</td>
-                  <td style={getColStyle('incomeTable', 1)} className="p-2.5 text-right text-xs text-sky-600 font-mono">
+                  <td style={getColStyle('incomeTable', 1)} className="p-2.5 text-left font-bold text-xs text-sky-600 font-mono">
                     {formatCLP(totalIncome)}
                   </td>
                 </tr>
@@ -345,10 +345,10 @@ export const FinanceTable: React.FC<FinanceTableProps> = ({
               <tfoot>
                 <tr className="bg-slate-100/80 font-bold text-slate-800 border-t border-slate-200">
                   <td style={getColStyle('expensesTable', 0)} className="p-2.5 border-r border-slate-200/40 text-xs">TOTAL EGRESOS</td>
-                  <td style={getColStyle('expensesTable', 1)} className="p-2.5 text-right text-xs text-rose-500 border-r border-slate-200/40 font-mono">
+                  <td style={getColStyle('expensesTable', 1)} className="p-2.5 text-left font-bold text-xs text-rose-500 border-r border-slate-200/40 font-mono">
                     {formatCLP(totalExpenses)}
                   </td>
-                  <td style={getColStyle('expensesTable', 2)} className="p-2.5 text-right text-xs text-amber-600 font-mono">
+                  <td style={getColStyle('expensesTable', 2)} className="p-2.5 text-right font-bold text-xs text-amber-600 font-mono">
                     {formatCLP(total2ndFloor)}
                   </td>
                 </tr>
